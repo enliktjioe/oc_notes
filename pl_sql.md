@@ -1,10 +1,10 @@
-# Learning Oracle Database 19c - PL/SQL
+# **Learning Oracle Database 19c - PL/SQL**
 
 
 
 https://www.linkedin.com/learning/learning-oracle-database-19c/pl-sql?u=26110466
 
-What is it?
+## What is it?
 
 - Programming Language/SQL
 - Extens Oracle SQL
@@ -12,7 +12,7 @@ What is it?
 - SQL is declarative: “here’s what I want to do"
 - PL/SQL is procedureal: “I know exactly how to do this and here’s how I’m going to do it"
 
-PL/SQL Language Elements
+## PL/SQL Language Elements
 
 - Loops
 - IF ELSE
@@ -40,3 +40,12 @@ Remember:
 https://www.linkedin.com/learning/learning-oracle-database-19c/the-ansi-sql-language-standard?u=26110466
 
 ![pl5](img/pl_sql/pl5.png)
+
+## Creating PL/SQL Functions
+
+- Syntax for CREATE function
+
+  - name the function
+  - what will it return?
+
+  ![function](img/pl_sql/function.png)
