@@ -88,3 +88,7 @@ https://www.linkedin.com/learning/learning-oracle-database-19c/the-ansi-sql-lang
 ### Static SQL Statement
 
 ![static](img/pl_sql/static_sql.png)
+
+## Error Handling
+
+![](img/pl_sql/error_handling.png)
