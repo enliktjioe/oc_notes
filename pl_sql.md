@@ -1,8 +1,9 @@
 # **Learning Oracle Database 19c - PL/SQL**
 
-
-
 https://www.linkedin.com/learning/learning-oracle-database-19c/pl-sql?u=26110466
+
+Instructor: Bob Bryla, Senior Oracle DBA
+https://www.linkedin.com/in/bobbryla/
 
 ## What is it?
 
@@ -92,3 +93,11 @@ https://www.linkedin.com/learning/learning-oracle-database-19c/the-ansi-sql-lang
 ## Error Handling
 
 ![](img/pl_sql/error_handling.png)
+
+## Extra learning resources for Oracle
+
+- Oracle Education
+- Oracle on YouTube
+- Oracle Experts
+- Oracle Documentation
+- LinkedIn Learning
