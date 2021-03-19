@@ -41,7 +41,7 @@ https://www.linkedin.com/learning/learning-oracle-database-19c/the-ansi-sql-lang
 
 ![pl5](img/pl_sql/pl5.png)
 
-## Creating PL/SQL Functions
+## Creating Functions
 
 - Syntax for CREATE function
 
@@ -49,3 +49,36 @@ https://www.linkedin.com/learning/learning-oracle-database-19c/the-ansi-sql-lang
   - what will it return?
 
   ![function](img/pl_sql/function.png)
+
+## Creating Procedures
+
+- Encapsulated section of PL/SQL or Java code
+- Can be anonymous
+- Zero or more arguments, but don't return values
+  - 
+- Can be stored in a package with other stored functions, procedures, and types
+
+## Declaring Variable
+
+![var_declare](img/pl_sql/var_declare.png)
+
+![var_declare](img/pl_sql/var_declare2.png)
+
+## Declare Cursor
+
+### What is Cursor?
+
+- a pointer to a private SQL are with metadata for running a SELECT or other DML statement
+- two types: explicit and implicit
+
+### Explicit Cursor
+
+![explicit_cursor](img/pl_sql/explicit_cursor.png)
+
+### Implicit Cursor
+
+![implicit_cursor](img/pl_sql/implicit_cursor.png)
+
+### Built-In  Cursor
+
+![builtin](img/pl_sql/built-in_cursor.png)
