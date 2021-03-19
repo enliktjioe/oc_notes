@@ -82,3 +82,9 @@ https://www.linkedin.com/learning/learning-oracle-database-19c/the-ansi-sql-lang
 ### Built-In  Cursor
 
 ![builtin](img/pl_sql/built-in_cursor.png)
+
+## Using SQL SELECT Statement
+
+### Static SQL Statement
+
+![static](img/pl_sql/static_sql.png)
