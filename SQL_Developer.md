@@ -41,7 +41,22 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/
 - Columns and data types
 - Number and other types
 - Primary and foreign keys
-- 
+
+## Database Optimization
+
+- 1NF (First Normal Form)
+ - Values in each cell should be atomic and tables should have no repeating groups
+- 2NF
+ - No value in a table should depend on only part of a key that can be used to uniquely identify a row
+- 3NF
+ - Values should not be stored if they can be calculated from another non-key field
+- Denormalization
+ - The process of intentionally duplicating information in a table, in violation of normalization rules
+ - Used to denormalize the normalized database
+ - 
+
+
+
 
 
 
