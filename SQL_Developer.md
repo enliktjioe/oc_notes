@@ -32,16 +32,30 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/
   - Example: a customer with their favorite table in the restaurant
     - This would be a one-to-many relationship. For every one table, there could be many customers who prefer to sit at it. But one customer cannot have many favorite tables.        
 - A **composite key** combines two or more fields to act as a unique identifier.
+  - When a primary key does not exist, a composite key can be used to uniquely identify and relate a record to other data.        
 
 ## Tables
 
 - Prepare the schema
+  - Using an ER diagram, you can plan out what fields will appear on which tables, and how they're related.
 - Naming tables
   - should be pluralized
 - Columns and data types
 - Number and other types
+  - Storing numeric data in numeric data types gives you the  ability to work with numbers directly, as you might do when you use  mathematical operations in queries.        
 - Primary and foreign keys
+
+## Relationships
+
+- Three types of relationship
+  - One to Many
+    - Example: one customer can have many reservations in booking system
+  - Many to Many
+    - Example: In restaurant, many orders can have many dishes, many dishes can be in many orders
+    - Extra table needed: OrderDishes (OrderID, DishID)
+  - One to One
+    - Example: customers -> personalInfos
+- Value from one field in one table, must be exist in the other field in another table
+  - example: FavoriteDish from customer table, and DishID from Dishes table
 - 
-
-
 
