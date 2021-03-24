@@ -14,7 +14,25 @@ https://www.linkedin.com/learning/oracle-database-12c-basic-sql/introduction-to-
 
 Terms
 
-- Transaction = every SQL command in Oracle
-- Commit = submit the SQL command into Oracle DB
-- Rollback = cancel the SQL command, so it will not be executed in the table
+- Transaction = every SQL command in Oracle, must be DML command
+- Commit = submit the SQL command into Oracle DB, must be DML command
+- Rollback = cancel the SQL command, so it will not be executed in the table, must be DML command
+- DDL = Data Definition Language
+  - CREATE
+  - ALTER
+  - DROP
+  - TRUNCATE
+- DML = Data Manipulation Language
+  - SELECT
+  - INSERT
+  - UPDATE
+  - DELETE
+
+## Grouping Data
+
+https://www.linkedin.com/learning/oracle-database-12c-basic-sql/introduction-to-aggregate-functions?u=26110466
+
+### Aggregation
+
+- 
 
