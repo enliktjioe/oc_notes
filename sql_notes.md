@@ -32,11 +32,16 @@ Terms
   - UPDATE
   - DELETE
 
-## Grouping Data
 
-https://www.linkedin.com/learning/oracle-database-12c-basic-sql/introduction-to-aggregate-functions?u=26110466
 
-### Aggregation
+## TODO
 
-- 
+- WITH clause
+- Sequence
+  - default, primary key
+  - as an input in sequence
+- Table casino.dailystats
+  - Sum of player bets
+  - Sum of player winnings
+  - CasinoCode
 
