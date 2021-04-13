@@ -1,4 +1,4 @@
-# Programming Foundation: Database
+# Part 1 - Programming Foundation: Database
 
 https://www.linkedin.com/learning/programming-foundations-databases-2/
 
@@ -56,8 +56,6 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/
    - The process of intentionally duplicating information in a table, in violation of normalization rules
    - Used to denormalize the normalized database
 
-
-
 ## Relationships
 
 - Three types of relationship
@@ -73,6 +71,41 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/
 
 
 
+# Part 2 - SQL Essential Training
+
+https://www.linkedin.com/learning/sql-essential-training-3
 
 
+
+- add one day to the current day
+
+  ```sql
+  SELECT DATETIME('now', '+1 day');
+  ```
+
+- Triggers
+
+  - Useful to create timestamps
+  - why?
+    - to automatically execute a group of statements whenever a specified event occurs
+  - AFTER INSERT
+    - Trigger timestamp right after inserting value
+  - BEFORE UPDATE
+    - The type of trigger to use for preventing updates to reconciled rows
+
+- Views and Subselects
+
+  - View as saving query
+    - A VIEW is like a stored subselect.
+  - It's equivalent to `WITH` in Oracle SQL
+  - When should you create a view from a SELECT statement?
+    - when you want to modify the existing displayed data
+  - What is a complex view?
+    - Complex views are created from more than one table or joined queries.
+
+- Simple CRUD Application
+
+  - Why is it preferable to use a named global space than the default global space for variables?
+    - to avoid collisions and clutter
+  - CRUD = Create Read Update Delete
 
