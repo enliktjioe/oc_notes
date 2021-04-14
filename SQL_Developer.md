@@ -109,3 +109,30 @@ https://www.linkedin.com/learning/sql-essential-training-3
     - to avoid collisions and clutter
   - CRUD = Create Read Update Delete
 
+
+
+# Part 3 - SQL: Data Reporting and Analysis
+
+- Make your queries faster
+  - using ROWNUM
+    example: `where rownum <= 25`
+  - it's similar to `limit` in PostgreSQL
+  
+- Saving query using `VIEW`
+
+  - it's similar to `WITH` clause in Oracle
+
+- Use variables using `INTO`
+
+  - Example: `SELECT col_name INTO <var_name>`
+
+- Use *Functions*
+  ![sql_function_declaration](img/SQL_Developer/sql_function_declaration.jpg)
+
+  ![sql_function_output](img/SQL_Developer/sql_function_output.jpg)
+
+- Use *Procedures*
+
+  ![sql_procedure_declaration](img/SQL_Developer/sql_procedure_declaration.jpg)
+  ![sql_procedure_output](img/SQL_Developer/sql_procedure_output.jpg)
+
