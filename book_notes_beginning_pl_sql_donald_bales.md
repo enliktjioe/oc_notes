@@ -75,17 +75,32 @@ https://www.goodreads.com/book/show/2092455.Beginning_Pl_SQL
 
     
 
-- sd
+- Scope
 
-- ad
+- Parameters
 
-- asd
 
-- asd
 
-- asd
+## Whoa! One Statement at a Time, Please!
 
-- asd
+- Insert
+- Update
 
+
+
+## Next Please, One Row at a Time!
+
+- Cursors
+  - `CURSOR` allow you to `FETCH` multiple rows from a `SQL SELECT` statement
+  - Fetch manually or automatically using a `CURSOR FOR LOOP`
+- Bulk Collect
+  - Used to improve the efficiency of loading an array with values from the database, and you can use `FORALL` to improve the efficiency of executing SQL statements with values from an array.
+
+
+
+## Just Like It Is in the Real World!
+
+- "Those who cannot remember the past are condemned to repeat it.” - George Santayana, Philosopher
+- "You can only connecting the dots by looking at the past, not the future" - Steve Jobs
 - 
 
