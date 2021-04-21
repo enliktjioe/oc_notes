@@ -59,7 +59,13 @@ https://www.linkedin.com/learning/oracle-database-19c-basic-sql/
   -  Drop an index on your own schema or another schema with the DROP INDEX statement
   - When you restore a table and its indexes, the index and its constraints won't have the same name it had originally
 
+## SET DEFINE OFF / ON
 
+- Why do we need `SET DEFINE OFF;` or `SET DEFINE ON;`
+
+  this is used when script contains special characters that may break the execution (in our case it's "&" in the categories part) 
+
+  so whenever a string contains "&", please use SET DEFINE OFF and then SET DEFINE ON in the end of the script 
 
 ## Next Steps
 
