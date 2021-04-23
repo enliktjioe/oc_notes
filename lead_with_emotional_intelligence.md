@@ -2,7 +2,7 @@
 
 Tutor: Britt Andreatta
 
-
+https://www.linkedin.com/learning/leading-with-emotional-intelligence-3/
 
 ## The Emotionally Intelligent Leader
 
