@@ -335,8 +335,6 @@ https://www.linkedin.com/learning/oracle-database-19c-basic-sql/
 
 https://www.linkedin.com/learning/oracle-database-12c-advanced-sql
 
-
-
 ## Multi-column Subquery
 
 ![image-20210430130558173](img/oracle_sql_notes/image-20210430130558173.png)
@@ -348,13 +346,238 @@ https://www.linkedin.com/learning/oracle-database-12c-advanced-sql
 - What is Index in Oracle?
   - Schema objects created in the database on one or more columns in the table
   - Can greatly improve query performance and access to data
-- 
+  
+- Sample use case: we have a sales table with millions of rows, and we want to look for sales on certain date
+  ![image-20210430134319034](img/oracle_SQL_notes/image-20210430134319034.png)
+
+  - Without indexing, Oracle SQL will scan entire table
+
+- Indexes automatically used by the Oracle DB to improve performance for certain queries
+
+- In this course, we will focused only on **B-Tree Index** type, as the most common one
+  ![image-20210430134536863](img/oracle_SQL_notes/image-20210430134536863.png)
+
+-  Sample index creation script
+
+  ```sql
+  create index emp_sal_idx on employees(salary) -- single index
+  create index emp_idx2 on employees(salary,hire_date) -- composite index
+  
+  -- drop index
+  drop index <index_name>
+  ```
+
+  - when you drop index, it doesn't affect the data in DB, because index is separate object in DB
 
 
 
+## Oracle Data Dictionary
+
+- What is it?
+  ![image-20210430150831743](img/oracle_SQL_notes/image-20210430150831743.png)
+  ![image-20210430150906959](img/oracle_SQL_notes/image-20210430150906959.png)
+  - `V$ Views` also can be described as `DICT`
+- Using the DICT view
+  ![image-20210430151528860](img/oracle_SQL_notes/image-20210430151528860.png)
+- Querying data dictionary views
+  - most of `v$` symbol were used by Oracle DBA
 
 
 
+## Transactions
+
+![image-20210430152223865](img/oracle_SQL_notes/image-20210430152223865.png)
+
+
+
+## Advanced Oracle Schema Objects
+
+- Using identity columns
+
+  ![image-20210430154459117](img/oracle_SQL_notes/image-20210430154459117.png)
+
+- Table Triggers
+
+  - Used for specific cases, for example: "only permit DML between 9am to 5pm"
+
+  - Trigger Types
+    ![image-20210430155637973](img/oracle_SQL_notes/image-20210430155637973.png)
+
+  - Creating triggers ![image-20210430155910814](img/oracle_SQL_notes/image-20210430155910814.png)
+
+
+    ![image-20210430155755302](img/oracle_SQL_notes/image-20210430155755302.png)
+
+- PL/SQL
+  ![image-20210430160040517](img/oracle_SQL_notes/image-20210430160040517.png)
+
+  - Procedures
+    ![image-20210430160224584](img/oracle_SQL_notes/image-20210430160224584.png)
+
+    - to execute the procedures use:
+
+      ```sql
+      EXEC hr.update_emp_sal()
+      ```
+
+  - Functions
+    Very similar to `Procedures`
+    ![image-20210430160340143](img/oracle_SQL_notes/image-20210430160340143.png)
+
+    - Execute as part of SQL statements, for example:
+
+      ```sql
+      select employee_id, first_name, period_of_service_year(employee_id) from employees;
+      -- inside schema hr.period_of_service_year
+      ```
+
+  - Packages
+    Groups multiple procedures, functions, types, variables, etc that share a business purpose
+    ![image-20210430160626096](img/oracle_SQL_notes/image-20210430160626096.png)
+
+    - two mandatory parts: package specification and package body
+      ![image-20210430160744791](img/oracle_SQL_notes/image-20210430160744791.png)
+
+  - Example of Procedure and Function:
+    ![image-20210430161153640](img/oracle_SQL_notes/image-20210430161153640.png)
+
+    
+
+    ![image-20210430161045071](img/oracle_SQL_notes/image-20210430161045071.png)
+
+    ![image-20210430161117950](img/oracle_SQL_notes/image-20210430161117950.png)
+
+- Synonyms
+
+  - It's like ALIAS in UNIX system
+
+  - Example:
+
+    ```sql
+    create or replace synonym emp for hr.employees;
+    -- using public synonym to be accessible by all users, it needs higher DB privilege
+    create or replace public synonym emp for hr.employees;
+    
+    -- using synonym alias instead of full table name
+  select * from emp where employee_id=100;
+    
+    -- drop synonym
+    drop synonym emp;
+    ```
+    
+
+- Simple Views
+
+  - View acts like table, similar to synonym (alias)
+
+  - Example:
+
+    ```sql
+    create or replace view emp_sales
+    as
+    select * from employees where job_id = 'SA_MAN';
+    
+    select * from emp_sales;
+    
+    -- DROP
+    drop view emp_sales;
+    ```
+
+- Complex Views
+
+  - Can be used to join multiple tables without using JOIN clause
+
+  - Example:
+
+    ```sql
+    CREATE OR REPLACE VIEW location_view AS
+    SELECT d.department_id, d.department_name, l.location_id, l.city
+    FROM departments d, locations l
+    WHERE d.location_id = l.location_id;
+    
+    SELECT * FROM location_view;
+    ```
+
+
+
+## Table Partitioning
+
+- In Oracle, we did table partitioning, by divide it per columns, not rows
+  ![image-20210430172956643](img/oracle_SQL_notes/image-20210430172956643.png)
+
+- Benefits
+
+  - Partition Pruning
+    ![image-20210430173202738](img/oracle_SQL_notes/image-20210430173202738.png)
+  - Database Administration Benefit
+    - Able to independently running some specific queries
+
+- Table Partitioning Methods
+
+  - List
+    Example partition based on state location
+
+    ![image-20210430173446524](img/oracle_SQL_notes/image-20210430173446524.png)
+
+  - Range
+    ![image-20210430173726809](img/oracle_SQL_notes/image-20210430173726809.png)
+
+  - Hash
+    ![image-20210430173751064](img/oracle_SQL_notes/image-20210430173751064.png)
+
+  - Interval
+
+  - Composite
+
+  - Automatic list
+
+- Using LIST partitions
+
+  - Example:
+
+    ```sql
+    CREATE TABLE sales_list
+    (
+        salesrep_id NUMBER(5),
+        salesrep_name VARCHAR2(40),
+        sales_state VARCHAR2(30),
+        sales_value NUMBER(10),
+        sales_date DATE
+    )
+    PARTITION BY LIST(sales_state)
+    (
+      PARTITION sales_CA VALUES('CA'),
+      PARTITION sales_NY VALUES('NY'),
+      PARTITION sales_central VALUES('TX','IL'),
+      PARTITION sales_other VALUES(DEFAULT)  
+    );
+    
+    -- sample insert to partition table
+    INSERT INTO sales_list VALUES (100,'Enlik','CA',100,'01-JAN-2017');
+    INSERT INTO sales_list VALUES (200,'Danny','NY',500,'02-JAN-2017');
+    INSERT INTO sales_list VALUES (300,'Nanako','TX',1000,'03-JAN-2017');
+    INSERT INTO sales_list VALUES (100,'Alise','IL',500,'04-JAN-2017');
+    
+    -- check how many rows per partition table
+    SELECT COUNT(*) FROM sales_list partition (sales_ca);
+    SELECT COUNT(*) FROM sales_list partition (sales_ny);
+    SELECT COUNT(*) FROM sales_list partition (sales_central);
+    SELECT COUNT(*) FROM sales_list partition (sales_other);
+    
+    ```
+
+- Splitting LIST partitions
+  ![image-20210430174731260](img/oracle_SQL_notes/image-20210430174731260.png)
+
+- Using RANGE partitions
+  ![image-20210430174844047](img/oracle_SQL_notes/image-20210430174844047.png)
+
+- Using HASH partitions
+
+  Hash type used when you don't have specific column that suitable for partitioning such as date or state from previous examples
+  ![image-20210430174929532](img/oracle_SQL_notes/image-20210430174929532.png)
+
+  ![image-20210430175004790](img/oracle_SQL_notes/image-20210430175004790.png)
 
 
 
