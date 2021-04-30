@@ -1,3 +1,257 @@
+# Oracle SQL
+
+## Unlocking user account
+
+https://www.oracletutorial.com/oracle-administration/how-to-unlock-a-user-in-oracle/
+
+## Dual
+
+In Oracle 10g release 1 and above, Oracle treats the use of `DUAL` the same as calling a function which simply evaluates the expression  used in the select list. This optimization provides even better  performance than directly accessing the physical `DUAL` table
+
+https://www.oracletutorial.com/oracle-basics/oracle-dual-table/.
+
+## Manipulating Data
+
+https://www.linkedin.com/learning/oracle-database-12c-basic-sql/introduction-to-transactions?u=26110466
+
+Terms
+
+- Transaction = every SQL command in Oracle, must be DML command
+- Commit = submit the SQL command into Oracle DB, must be DML command
+- Rollback = cancel the SQL command, so it will not be executed in the table, must be DML command
+- Queries = retrieving data from database tables
+- DDL = Data Definition Language, creating new database objects
+  - CREATE
+  - ALTER
+  - DROP
+  - TRUNCATE
+- DML = Data Manipulation Language, modifying existing data in your database
+  - SELECT
+  - INSERT
+  - UPDATE
+  - DELETE
+
+## Basic SQL clause
+
+- String inside quotation mark 'E%'
+
+  - case sensitive, means 'E%' and 'e%' are different
+  - happened in LIKE, IN
+
+- LIKE only for string values
+
+- IN can be used for numeric values
+
+  - also can use NOT IN
+
+- `to_date()` function
+
+  - for example:
+
+    ```sql
+    select * from employee
+    where hire_date > to_date('01-JAN-2000', 'DD-MON-YYYY')
+    ```
+
+- Using `DISTINCT` to eliminate duplicates
+
+  - Example:
+
+    ```sql
+    select distinct department_id, salary
+    from employees
+    ```
+
+- Performing basic numeric calculation inside the SELECT is possible
+
+- Describe the structure of a table using `DESCRIBE <table_name>`
+
+
+
+## String, Number, and Date Functions
+
+- LENGTH = get the length of the string value
+
+- SUBSTR = get the character from string values
+
+  - SUBSTR(<col_name>, starting_pos, length)
+
+- CONCAT = combine multiple string values
+
+  - alternative using ||
+
+- LOWER  / UPPER = change the string value to lower/upper case
+
+- INSTR = get the position of the first character inside string values
+
+  - phone_number: 011.44.1344.345268
+  - INSTR(phone_number, '5')
+  - result = 15 (start with 1, dot(.) character counted)
+
+- RPAD and LPAD = padding from right/left side of string values
+
+  ![](img/oracle_SQL_notes/rpad_lpad.jpg)
+
+- TO_CHAR
+
+  - to convert number into a string and give it specific format
+    ![](img/oracle_SQL_notes/to_char.jpg)
+  - to format DATE values
+    ![](img/oracle_SQL_notes/to_char_date.jpg)
+  - to filter DATE values
+    ![](img/oracle_SQL_notes/to_char_filter_date.jpg)
+
+- The Special Oracle DUAL table
+
+  - created during the installation of Oracle DB
+  - used to select any value without create/specifying database/table
+
+- ROUND = round the number value into certain decimal points, with round up/down values
+
+- TRUNC = truncate the number value from defined position, without rounding the values
+
+- SYSDATE = displaying current date and time
+
+  - combine with TO_CHAR
+    ![](img/oracle_SQL_notes/sysdate.jpg)
+
+- SYSTIMESTAMP = get the current timestamp with highest precision
+
+- MONTHS_BETWEEN = calculate how many months have been passed between two distinct dates
+
+  - Example case: get the number of years employed
+    ![months_between](img/oracle_SQL_notes/months_between.jpg)
+
+- ADD_MONTHS = add a specified number of months to specific date
+
+  - Example case:
+
+    ```sql
+    add_months(sysdate, 2)
+    ```
+
+
+
+
+
+## Joining Table Data
+
+- All types of join
+  ![joins](img/oracle_SQL_notes/joins.jpg)
+
+- Oracle join syntax vs ANSI syntax
+  ![oracle_vs_ANSI](img/oracle_SQL_notes/oracle_vs_ANSI.jpg)
+  - Oracle has different syntax that give same result
+  - For compatiblity, it's recommended to use the ANSI syntax
+
+
+
+# **Learning Oracle Database 19c - PL/SQL**
+
+https://www.linkedin.com/learning/learning-oracle-database-19c/pl-sql?u=26110466
+
+Instructor: Bob Bryla, Senior Oracle DBA
+https://www.linkedin.com/in/bobbryla/
+
+## What is it?
+
+- Programming Language/SQL
+- Extens Oracle SQL
+- Based on the Ada language
+- SQL is declarative: “here’s what I want to do"
+- PL/SQL is procedureal: “I know exactly how to do this and here’s how I’m going to do it"
+
+## PL/SQL Language Elements
+
+- Loops
+- IF ELSE
+- Exception Handling
+- Storing functions and procedures
+- Think it like programming language instead SQL
+
+![pl1](img/oracle_SQL_notes/pl1.png)
+
+![pl2](img/oracle_SQL_notes/pl2.png)
+
+![pl3](img/oracle_SQL_notes/pl3.png)
+
+![pl4](img/oracle_SQL_notes/pl4.png)
+
+Remember:
+
+- SQL: report writing needing simple joins, ad hoc queries
+- PL/SQL
+  - Complex business logic
+  - Stored procedures or functions
+
+## The ANSI SQL language standard
+
+https://www.linkedin.com/learning/learning-oracle-database-19c/the-ansi-sql-language-standard?u=26110466
+
+![pl5](img/oracle_SQL_notes/pl5.png)
+
+## Creating Functions
+
+- Syntax for CREATE function
+
+  - name the function
+  - what will it return?
+
+  ![function](img/oracle_SQL_notes/function.png)
+
+## Creating Procedures
+
+- Encapsulated section of PL/SQL or Java code
+- Can be anonymous
+- Zero or more arguments, but don't return values
+  - 
+- Can be stored in a package with other stored functions, procedures, and types
+
+## Declaring Variable
+
+![var_declare](img/oracle_SQL_notes/var_declare.png)
+
+![var_declare](img/oracle_SQL_notes/var_declare2.png)
+
+## Declare Cursor
+
+### What is Cursor?
+
+- a pointer to a private SQL are with metadata for running a SELECT or other DML statement
+- two types: explicit and implicit
+
+### Explicit Cursor
+
+![explicit_cursor](img/oracle_SQL_notes/explicit_cursor.png)
+
+### Implicit Cursor
+
+![implicit_cursor](img/oracle_SQL_notes/implicit_cursor.png)
+
+### Built-In  Cursor
+
+![builtin](img/oracle_SQL_notes/built-in_cursor.png)
+
+## Using SQL SELECT Statement
+
+### Static SQL Statement
+
+![static](img/oracle_SQL_notes/static_sql.png)
+
+## Error Handling
+
+![](img/oracle_SQL_notes/error_handling.png)
+
+## Extra learning resources for Oracle
+
+- Oracle Education
+- Oracle on YouTube
+- Oracle Experts
+- Oracle Documentation
+- LinkedIn Learning
+
+
+
 # Oracle Database 19c
 
 https://www.linkedin.com/learning/oracle-database-19c-basic-sql/
@@ -82,9 +336,121 @@ https://www.linkedin.com/learning/oracle-database-12c-advanced-sql
 
 
 
-## Multi-column Subqueries
+## Multi-column Subquery
 
 ![image-20210430130558173](img/oracle_sql_notes/image-20210430130558173.png)
 
 
+
+## Indexes
+
+- 
+
+
+
+
+
+
+
+
+
+# How to Recover Data (Without a Backup!)
+
+https://blogs.oracle.com/sql/how-to-recover-data-without-a-backup
+
+
+
+## Salvaging the Deleted Rows
+
+Insert
+
+```sql
+insert into table
+  select * from <table> as of timestamp sysdate – interval '1' hour
+  where <conditions to find the rows>;
+```
+
+Finding deleted rows
+
+```sql
+select * from <table> as of timestamp sysdate – interval '1' hour
+minus 
+select * from <table>;
+```
+
+Recover
+
+```sql
+insert into <table> 
+  select * from <table> as of timestamp sysdate – interval '1' hour
+  minus 
+  select * from <table>;
+```
+
+
+
+## Recovering deleted rows from oracle table
+
+https://stackoverflow.com/questions/23334495/recovering-deleted-rows-from-oracle-table/23334728
+
+You can recover the details using Oracle Flashback Query.  You could query the contents of the table as of a time before the  deletion to find out what data had been lost, and, if appropriate,  re-insert the lost data in the database. Here's the sample query: 
+
+```sql
+select * from MANUAL_TRANSACTION as of timestamp to_timestamp('28-APR-2014 12:30:00', 'DD-MON-YYYY HH:MI:SS') where ' clause based on your deleted data';
+```
+
+
+
+
+
+# PostgreSQL vs Oracle SQL
+
+## Jan Karremans - Comparing PostgreSQL to Oracle. The best kept secrets to success
+
+https://www.youtube.com/watch?v=NHUVJBrpF64
+
+- Speaker: Jan Karremans, EDB Postgres
+- Oracle = Oracle Enterprise Edition
+- Postgres = Enterprise Postgres DB
+- High Availability
+  ![high_availability](img/oracle_SQL_notes/high_availability.jpg)
+- Performance and Scalability
+  ![performance_and_scalability](img/oracle_SQL_notes/performance_and_scalability.jpg)
+- Security
+  ![security](img/oracle_SQL_notes/security.jpg)
+- Integration
+  ![integration](img/oracle_SQL_notes/integration-1618394141364.jpg)
+- Application Development
+  ![application_development](img/oracle_SQL_notes/application_development.jpg)
+- Big and Unstructured Data
+  ![big_and_unstructured_data](img/oracle_SQL_notes/big_and_unstructured_data.jpg)
+- Management
+  ![management](img/oracle_SQL_notes/management.jpg)
+
+
+
+## Oracle Vs PostgreSQL [#Database](https://www.youtube.com/hashtag/database) [#Which](https://www.youtube.com/hashtag/which) is most [#Powerful](https://www.youtube.com/hashtag/powerful) database?
+
+https://www.youtube.com/watch?v=Uo_jnAKLqAg
+
+- Oracle
+  - developed in 1977
+  - Editions
+    - Enterprise
+    - Standard
+    - Express
+    - Oracle Lite
+  - Run on the major platforms like Windows, UNIX, Linux, and macOS
+  - It build around a relational database in which data can be accessed by users through an application or query language called SQL
+- PostgreSQL
+  - Support all features of RDBMS along with that other features which are not available in RDBMS such as views, stored procedures, indexes, and triggers
+  - Has open database connectivity
+  - Run on the major platforms
+  - It support unstructured data such as video, text,a udio, images
+  - API for different languages such as C/C++, Java, Python, Perl, etc
+- Oracle vs PostgreSQL
+  ![oracle_vs_postgres](img/oracle_SQL_notes/oracle_vs_postgres.jpg)
+- Conclusion
+  - Postgres is more powerful than Oracle in many aspects
+  - Compatibility with other RDBMS and ease use with large community of developers
 
