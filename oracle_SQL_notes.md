@@ -344,6 +344,9 @@ https://www.linkedin.com/learning/oracle-database-12c-advanced-sql
 
 ## Indexes
 
+- What is Index in Oracle?
+  - Schema objects created in the database on one or more columns in the table
+  - Can greatly improve query performance and access to data
 - 
 
 
@@ -454,3 +457,22 @@ https://www.youtube.com/watch?v=Uo_jnAKLqAg
   - Postgres is more powerful than Oracle in many aspects
   - Compatibility with other RDBMS and ease use with large community of developers
 
+
+
+# SQL Optimization
+
+## Optimizing SQL Performance
+
+https://www.youtube.com/watch?v=VCJTVk4xZIs
+
+
+
+## Oracle SQL Optimizer Overview | Query Optimizer Concepts
+
+https://youtu.be/PPJ6EdB7V-o
+
+
+
+## Oracle Performance Tuning - EXPLAIN PLAN
+
+https://youtu.be/kYUrS8iAiJc
