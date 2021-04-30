@@ -215,26 +215,27 @@ https://www.linkedin.com/learning/learning-oracle-database-19c/the-ansi-sql-lang
 
 ## Declare Cursor
 
-### What is Cursor?
+- What is Cursor?
+  - a pointer to a private SQL are with metadata for running a SELECT or other DML statement
+  - two types: explicit and implicit
 
-- a pointer to a private SQL are with metadata for running a SELECT or other DML statement
-- two types: explicit and implicit
-
-### Explicit Cursor
+- Explicit Cursor
 
 ![explicit_cursor](img/oracle_SQL_notes/explicit_cursor.png)
 
-### Implicit Cursor
+- Implicit Cursor
 
 ![implicit_cursor](img/oracle_SQL_notes/implicit_cursor.png)
 
-### Built-In  Cursor
+- Built-In  Cursor
 
 ![builtin](img/oracle_SQL_notes/built-in_cursor.png)
 
+
+
 ## Using SQL SELECT Statement
 
-### Static SQL Statement
+- Static SQL Statement
 
 ![static](img/oracle_SQL_notes/static_sql.png)
 
