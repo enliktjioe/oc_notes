@@ -76,3 +76,15 @@ https://www.linkedin.com/learning/oracle-database-19c-basic-sql/
 
 
 
+# Oracle Database 12c: Advanced SQL
+
+https://www.linkedin.com/learning/oracle-database-12c-advanced-sql
+
+
+
+## Multi-column Subqueries
+
+![image-20210430130558173](img/oracle_sql_notes/image-20210430130558173.png)
+
+
+
