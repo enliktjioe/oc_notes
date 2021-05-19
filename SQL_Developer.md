@@ -1,16 +1,18 @@
-# Part 1 - Programming Foundation: Database
+# Become SQL Developer
+
+## Part 1 - Programming Foundation: Database
 
 https://www.linkedin.com/learning/programming-foundations-databases-2/
 
-## SQL
+### SQL
 
 - The language that we used to communicate with database
 
-## Schema
+### Schema
 
 - The database's **schema** includes the information about the layout of tables and other information about the database itself. 
 
-## Database Foundations
+### Database Foundations
 
 - ACID and transactions
   - Atomic
@@ -34,7 +36,7 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/
 - A **composite key** combines two or more fields to act as a unique identifier.
   - When a primary key does not exist, a composite key can be used to uniquely identify and relate a record to other data.        
 
-## Tables
+### Tables
 
 - Prepare the schema
   - Using an ER diagram, you can plan out what fields will appear on which tables, and how they're related.
@@ -45,7 +47,7 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/
   - Storing numeric data in numeric data types gives you the  ability to work with numbers directly, as you might do when you use  mathematical operations in queries.        
 - Primary and foreign keys
 
-## Database Optimization
+### Database Optimization
 - 1NF (First Normal Form)
    - Values in each cell should be atomic and tables should have no repeating groups
 - 2NF
@@ -56,7 +58,7 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/
    - The process of intentionally duplicating information in a table, in violation of normalization rules
    - Used to denormalize the normalized database
 
-## Relationships
+### Relationships
 
 - Three types of relationship
   - One to Many
@@ -71,7 +73,7 @@ https://www.linkedin.com/learning/programming-foundations-databases-2/
 
 
 
-# Part 2 - SQL Essential Training
+## Part 2 - SQL Essential Training
 
 https://www.linkedin.com/learning/sql-essential-training-3
 
@@ -111,7 +113,7 @@ https://www.linkedin.com/learning/sql-essential-training-3
 
 
 
-# Part 3 - SQL: Data Reporting and Analysis
+## Part 3 - SQL: Data Reporting and Analysis
 
 - Make your queries faster
   - using ROWNUM
@@ -136,3 +138,106 @@ https://www.linkedin.com/learning/sql-essential-training-3
   ![sql_procedure_declaration](img/SQL_Developer/sql_procedure_declaration.jpg)
   ![sql_procedure_output](img/SQL_Developer/sql_procedure_output.jpg)
 
+
+
+# Advanced SQL for Query Tuning and Performance Optimization
+
+https://www.linkedin.com/learning/advanced-sql-for-query-tuning-and-performance-optimization
+
+## Partitioning Data
+
+- Large Tables = Large Indexes
+- Indexing helping scanning performance
+  - If we know certain data that we need exist in one of the partition, we can use only that partition
+  - For example: partition based on monthly data
+
+
+
+## Types of Indexes
+
+- Indexing
+  - purposes
+    - speed up access to data
+    - help enforce constraints
+    - indexes are ordered
+    - typically smaller than tables
+  - Reading speed - from memory is the fastest
+    ![image-20210519160804297](img/SQL_Developer/image-20210519160804297.png)
+- B-tree indexes
+  - Uses
+    ![image-20210519160911699](img/SQL_Developer/image-20210519160911699.png)
+  - Example use in Postgres
+    ![image-20210519160936388](img/SQL_Developer/image-20210519160936388.png)
+- Bitmap
+  - Use cases
+    ![image-20210519160957309](img/SQL_Developer/image-20210519160957309.png)
+  - Oracle allow you to create bitmap indexes explicitly
+  - Postgres does not, but builds bitmap indexes on the fly as needed
+- Hash
+  - Few things
+    ![image-20210519161133205](img/SQL_Developer/image-20210519161133205.png)
+- Special purpose indexes on Postgres
+  - GIST
+    ![image-20210519161231165](img/SQL_Developer/image-20210519161231165.png)
+  - SP-GIST
+    ![image-20210519161240733](img/SQL_Developer/image-20210519161240733.png)
+  - GIN
+    ![image-20210519161253895](img/SQL_Developer/image-20210519161253895.png)
+  - BRIN
+    ![image-20210519161307940](img/SQL_Developer/image-20210519161307940.png)
+
+
+
+## Tuning Joins
+
+- Tips
+  ![image-20210519161411047](img/SQL_Developer/image-20210519161411047.png)
+- Subqueries vs Joins
+  - There is performance difference between using subqueries and joins
+    ![image-20210519161542786](img/SQL_Developer/image-20210519161542786.png)
+
+
+
+
+
+## Partitioning Data
+
+- Horizontal vs vertical partitioning
+  - Horizontal
+    ![image-20210519161641831](img/SQL_Developer/image-20210519161641831.png)
+  - Vertical
+    ![image-20210519161653033](img/SQL_Developer/image-20210519161653033.png)
+- Range
+- List
+- Hash
+
+
+
+## Materialized Views
+
+- Precomputed queries
+- Join and store results
+- Apply other operations
+- Info
+  ![image-20210519161812723](img/SQL_Developer/image-20210519161812723.png)
+- Example:
+  ![image-20210519161831409](img/SQL_Developer/image-20210519161831409.png)
+- When to Use
+  ![image-20210519161903747](img/SQL_Developer/image-20210519161903747.png)
+
+
+
+
+
+## Other Optimization Techniques
+
+- Collect statistics about data in tables
+- Hints to the query optimizer
+- Parallel query execution
+- Misc tips
+  - Indexing
+    ![image-20210519162126473](img/SQL_Developer/image-20210519162126473.png)
+  - Index Range Scan
+    ![image-20210519162151041](img/SQL_Developer/image-20210519162151041.png)
+  - Filtering and Data Types
+    ![image-20210519162210586](img/SQL_Developer/image-20210519162210586.png)
