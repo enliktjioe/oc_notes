@@ -349,6 +349,8 @@ https://campus.datacamp.com/courses/database-design
 - Choosing DBMS
   ![image-20210528140757276](img/datacamp_db_design/image-20210528140757276.png)
   - If the data changing rapidly, NoSQL is the option for you
+  - Example
+    ![image-20210528141033920](img/datacamp_db_design/image-20210528141033920.png)
 
 
 
