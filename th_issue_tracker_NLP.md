@@ -57,16 +57,6 @@ https://comserv.cs.ut.ee/ati_thesis/datasheet.php?id=72285&year=2021
 
 
 
-## Determine the dimensions of embedding
-
-![image-20210601125800011](img/th_issue_tracker_NLP/image-20210601125800011.png)
-
-## Determine the transformations
-
-![image-20210601125133365](img/th_issue_tracker_NLP/image-20210601125133365.png)
-
-
-
 ## Results
 
 ![image-20210601124041160](img/th_issue_tracker_NLP/image-20210601124041160.png)
@@ -82,3 +72,25 @@ https://comserv.cs.ut.ee/ati_thesis/datasheet.php?id=72285&year=2021
 ## Conclusion
 
 ![image-20210601124341393](img/th_issue_tracker_NLP/image-20210601124341393.png)
+
+
+
+## Q&A
+
+### Determine the dimensions of embedding
+
+![image-20210601125800011](img/th_issue_tracker_NLP/image-20210601125800011.png)
+
+### Determine the transformations
+
+![image-20210601125133365](img/th_issue_tracker_NLP/image-20210601125133365.png)
+
+### Models in Real Life
+
+![image-20210601130344300](img/th_issue_tracker_NLP/image-20210601130344300.png)
+
+
+
+## Photos
+
+![image-20210601130805826](img/th_issue_tracker_NLP/image-20210601130805826.png)
