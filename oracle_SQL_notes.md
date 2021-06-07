@@ -819,3 +819,41 @@ https://youtu.be/PPJ6EdB7V-o
 ## Oracle Performance Tuning - EXPLAIN PLAN
 
 https://youtu.be/kYUrS8iAiJc
+
+
+
+
+
+# Indexing in Oracle DB
+
+### How Indexing Works?
+
+https://dataschool.com/sql-optimization/how-indexing-works/
+
+- Why?
+  - We want to find a piece of information in a large DB
+  - Rather than let computer look through every rows to find it, using indexes it will help create sorted list without having to create all new sorted tables
+- When to use?
+  - As your DB becomes larger and larger
+- When not to use?
+  - If DB is constantly receiving writes then the indexes will never be usable
+  - This is why indexes are typically applied to DBs in data warehouses that get a new data updated on a scheduled basis (off-peak hours) and not production DBs which might be receiving new writes all the time
+- Summary
+  - Indexing can vastly reduce the time of queries
+  - Not every DB will benefit from indexing
+  - Not every index will increase the query speed for the DB
+
+
+
+# Oracle Create Index - OracleTutorials
+
+https://www.oracletutorial.com/oracle-index/oracle-create-index
+
+![image-20210607170301560](img/oracle_SQL_notes/image-20210607170301560.png)
+
+
+
+## How to Create and Use Indexes in Oracle DB - blogs.oracle.com
+
+https://blogs.oracle.com/sql/how-to-create-and-use-indexes-in-oracle-database
+
