@@ -241,3 +241,86 @@ https://www.linkedin.com/learning/advanced-sql-for-query-tuning-and-performance-
     ![image-20210519162151041](img/SQL_Developer/image-20210519162151041.png)
   - Filtering and Data Types
     ![image-20210519162210586](img/SQL_Developer/image-20210519162210586.png)
+
+
+
+# Datacamp - Cleaning Data in SQL Server Databases
+
+https://campus.datacamp.com/courses/cleaning-data-in-sql-server-databases/
+
+
+
+## Starting with Cleaning Data
+
+- Using Replicate function to format data
+  ![image-20210608152217029](img/SQL_Developer/image-20210608152217029.png)
+
+  
+
+
+
+
+
+## Dealing with missing data, duplicate data, and different date formats
+
+- Filter missing value using COALESCE()
+  ![image-20210608155647096](img/SQL_Developer/image-20210608155647096.png)
+
+- Dealing with different date formats
+
+  - using CONVERT
+    ![image-20210608155954025](img/SQL_Developer/image-20210608155954025.png)
+  - using FORMAT
+    ![image-20210608160004831](img/SQL_Developer/image-20210608160004831.png)
+  - Convert vs Format
+    `FORMAT()` is more flexible, but it is not recommended for high volumes of data because it is slower.
+
+  
+
+## Dealing with out of range values, different data types, and pattern matching
+
+- What is out of range values?
+  ![image-20210608160355785](img/SQL_Developer/image-20210608160355785.png)
+  - Detecting out of range values
+    ![image-20210608160418656](img/SQL_Developer/image-20210608160418656.png)
+- Converting data with different types
+  ![image-20210608160903285](img/SQL_Developer/image-20210608160903285.png)
+- Pattern matching
+  ![image-20210608161212356](img/SQL_Developer/image-20210608161212356.png)
+  ![image-20210608161225136](img/SQL_Developer/image-20210608161225136.png)
+
+
+
+
+
+
+
+## Combining, splitting, and transforming data
+
+- Combining name and surname
+  ![image-20210608161600650](img/SQL_Developer/image-20210608161600650.png)
+
+- Combining Dates
+  ![image-20210608161437316](img/SQL_Developer/image-20210608161437316.png)
+
+- Splitting data of one column into more columns
+  ![image-20210608161923171](img/SQL_Developer/image-20210608161923171.png)
+
+  ![image-20210608162011428](img/SQL_Developer/image-20210608162011428.png)
+
+- Transforming rows into columns and vice versa
+  - Using PIVOT
+    ![image-20210608162147524](img/SQL_Developer/image-20210608162147524.png)
+  - Using UNPIVOT - turn product_name into rows
+    ![image-20210608162234706](img/SQL_Developer/image-20210608162234706.png)
+
+## Summary
+
+- Chapter 1
+  ![image-20210608162342282](img/SQL_Developer/image-20210608162342282.png)
+- Chapter 2
+  ![image-20210608162355613](img/SQL_Developer/image-20210608162355613.png)
+- Chapter 3
+  ![image-20210608162405330](img/SQL_Developer/image-20210608162405330.png)
+- Chapter 4
+  ![image-20210608162412026](img/SQL_Developer/image-20210608162412026.png)
