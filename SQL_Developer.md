@@ -355,3 +355,7 @@ DB files on "files/Ex_Files_SQL_Code_Challenges"
 
 ## Create a report showing the five most popular books to checkout
 
+![image-20210611143950427](img/SQL_Developer/image-20210611143950427.png)
+
+
+
