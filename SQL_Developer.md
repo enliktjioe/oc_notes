@@ -324,3 +324,34 @@ https://campus.datacamp.com/courses/cleaning-data-in-sql-server-databases/
   ![image-20210608162405330](img/SQL_Developer/image-20210608162405330.png)
 - Chapter 4
   ![image-20210608162412026](img/SQL_Developer/image-20210608162412026.png)
+
+
+
+# SQL Code Challenges
+
+https://www.linkedin.com/learning/sql-code-challenges
+
+DB files on "files/Ex_Files_SQL_Code_Challenges"
+
+
+
+## Generate a list of the five customers who make the most orders
+
+![image-20210611142130658](img/SQL_Developer/image-20210611142130658.png)
+
+
+
+## Check for books due back
+
+![image-20210611142912949](img/SQL_Developer/image-20210611142912949.png)
+
+
+
+## Create a report showing the 10 patrons who have checked out the fewest books
+
+![image-20210611143359019](img/SQL_Developer/image-20210611143359019.png)
+
+
+
+## Create a report showing the five most popular books to checkout
+
