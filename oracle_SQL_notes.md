@@ -857,3 +857,17 @@ https://www.oracletutorial.com/oracle-index/oracle-create-index
 
 https://blogs.oracle.com/sql/how-to-create-and-use-indexes-in-oracle-database
 
+
+
+## Oracle SYS_REFCURSOR
+
+- Use case: in **gamingreporting.SpainJackpotBot_Proc**
+
+  ![sys_refcursor_spainjackpot](img/oracle_SQL_notes/sys_refcursor_spainjackpot.png)
+
+- References
+
+  - https://oracle-base.com/articles/misc/using-ref-cursors-to-return-recordsets
+  - https://oracle-base.com/articles/12c/implicit-statement-results-12cr1
+  - https://oracle-base.com/articles/misc/check-the-contents-of-ref-cursors
+  - https://www.youtube.com/watch?v=TXtxZi2i9lg
