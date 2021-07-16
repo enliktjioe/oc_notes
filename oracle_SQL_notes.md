@@ -871,3 +871,17 @@ https://blogs.oracle.com/sql/how-to-create-and-use-indexes-in-oracle-database
   - https://oracle-base.com/articles/12c/implicit-statement-results-12cr1
   - https://oracle-base.com/articles/misc/check-the-contents-of-ref-cursors
   - https://www.youtube.com/watch?v=TXtxZi2i9lg
+
+
+
+## To check if column existed
+
+https://gist.github.com/davidwaterston/3755420
+
+```sql
+select column_name as found
+from user_tab_cols
+where table_name = '__TABLE_NAME__'
+and column_name = '__COLUMN_NAME__'
+```
+
