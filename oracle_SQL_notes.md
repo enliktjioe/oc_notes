@@ -885,3 +885,8 @@ where table_name = '__TABLE_NAME__'
 and column_name = '__COLUMN_NAME__'
 ```
 
+
+
+# Using Cursor
+
+https://www.guru99.com/pl-sql-cursor.html#:~:text=A%20Cursor%20is%20a%20pointer,returned%20by%20the%20SQL%20statement.
