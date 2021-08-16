@@ -363,4 +363,129 @@ DB files on "files/Ex_Files_SQL_Code_Challenges"
 
 https://www.linkedin.com/learning/advanced-sql-for-application-development/designing-an-ecommerce-application-database?u=26110466
 
-## 
+Instructor: Dan Sullivan
+
+## Index
+
+<img src="img/SQL_Developer/image-20210816154349483.png" alt="image-20210816154349483" style="zoom:50%;" />
+
+
+
+Type of Indexes
+
+- B-tree
+- Hashes
+- Bitmap
+- Specialized indexes
+
+
+
+B-Tree Indexes
+
+![image-20210816154522573](img/SQL_Developer/image-20210816154522573.png)
+
+Hash Indexes
+
+Hash values
+
+![image-20210816154605368](img/SQL_Developer/image-20210816154605368.png)
+
+Things to consider when using hash indexes
+
+![image-20210816154627989](img/SQL_Developer/image-20210816154627989.png)
+
+Bulk Loading without Indexes
+
+![image-20210816154706543](img/SQL_Developer/image-20210816154706543.png)
+
+Create Indexes
+
+![image-20210816154754484](img/SQL_Developer/image-20210816154754484.png)
+
+
+
+## Object-Relational Mapping (ORM)
+
+Relational vs Object-Oriented Model
+
+![image-20210816154849358](img/SQL_Developer/image-20210816154849358.png)
+
+Similarities between both types
+
+![image-20210816154914822](img/SQL_Developer/image-20210816154914822.png)
+
+
+
+SQLAlchemy
+
+![image-20210816155124761](img/SQL_Developer/image-20210816155124761.png)
+
+
+
+## Designing for Scalability
+
+Overview of Partitioning
+
+![image-20210816155421903](img/SQL_Developer/image-20210816155421903.png)
+
+Range Partitioning
+
+When to use?
+
+![image-20210816155453870](img/SQL_Developer/image-20210816155453870.png)
+
+
+
+Define a Partitioned Table
+
+![image-20210816155630632](img/SQL_Developer/image-20210816155630632.png)
+
+
+
+## Designing for Reliability
+
+Error trapping
+
+![image-20210816155715677](img/SQL_Developer/image-20210816155715677.png)
+
+
+
+## Designing for Maintainability
+
+**Challenges**
+
+![image-20210816160243411](img/SQL_Developer/image-20210816160243411.png)
+
+**Methods**
+
+![image-20210816160254637](img/SQL_Developer/image-20210816160254637.png)
+
+**Good Practice using ad hoc scripts for schema changes**
+
+![image-20210816160337972](img/SQL_Developer/image-20210816160337972.png)
+
+
+
+**Liquibase - Automated Schema Migration**
+
+liquibase.org
+
+![image-20210816160454989](img/SQL_Developer/image-20210816160454989.png)
+
+**Basic Sequence**
+
+![image-20210816160529436](img/SQL_Developer/image-20210816160529436.png)
+
+
+
+## Key Considerations
+
+- SQL query performance
+- Indexing
+  - not too many and not too few indexes
+- Object-relational mapping
+- Scalability, partitioning data, and replication
+- Reliability and error handling
+
+
+
