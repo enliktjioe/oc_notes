@@ -359,3 +359,8 @@ DB files on "files/Ex_Files_SQL_Code_Challenges"
 
 
 
+# Advanced SQL for Application Development
+
+https://www.linkedin.com/learning/advanced-sql-for-application-development/designing-an-ecommerce-application-database?u=26110466
+
+## 
