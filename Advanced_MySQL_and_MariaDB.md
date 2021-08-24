@@ -8,6 +8,12 @@ Environment
 
 ![image-20210824114509172](img/Advanced_MySQL_and_MariaDB/image-20210824114509172.png)
 
+## Intro
+
+https://www.linkedin.com/learning/linux-system-engineer-database-servers-using-mariadb/what-is-mariadb?u=26110466
+
+![image-20210824135153080](img/Advanced_MySQL_and_MariaDB/image-20210824135153080.png)
+
 
 
 ## How MariaDB is Different
